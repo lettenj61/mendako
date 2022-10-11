@@ -20,6 +20,13 @@ textarea[type="text"] {
   transition: all 0.2s ease;
   display: block;
   width: 100%;
+  background-color: var(--control-bg-color);
+  color: var(--control-input-color);
+}
+
+optgroup, option {
+  background-color: var(--control-bg-color);
+  color: var(--control-input-color);
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]):not(:disabled):hover,
@@ -50,7 +57,7 @@ textarea.success {
 
 select {
   -webkit-appearance: none;
-  background: #f3f3f6 no-repeat 100%;
+  background: var(--control-bg-color) no-repeat 100%;
   background-size: 1ex;
   background-origin: content-box;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='40' fill='%23555'><polygon points='0,0 60,0 30,40'/></svg>");
@@ -116,12 +123,13 @@ button:hover {
   opacity: 0.8;
 }
 
-.button:active,
-[type="button"]:active,
-[type="reset"]:active,
-[type="submit"]:active,
-button:active {
-  transform: scale(0.98);
+.button:active:not(:disabled),
+[type="button"]:active:not(:disabled),
+[type="reset"]:active:not(:disabled),
+[type="submit"]:active:not(:disabled),
+button:active:not(:disabled) {
+  /* transform: scale(0.98); */
+  box-shadow: 0 0 0 3px var(--ring-color);
 }
 
 input:disabled,

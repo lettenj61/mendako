@@ -6,12 +6,19 @@
     <title>Elements</title>
     <link rel="stylesheet" href="../dist/chota.css" />
     <style>
+      :root {
+        --color-primary: #2563eb;
+      }
       body.dark {
-        --bg-color: #000;
-        --bg-secondary-color: #131316;
-        --font-color: #f5f5f5;
+        --bg-color: #1e293b;
+        --bg-secondary-color: #334155;
+        --font-color: #f1f5f9;
+        --ring-color: #6b7280;
+        --color-primary: #3b82f6;
         --color-grey: #ccc;
         --color-darkGrey: #777;
+        --control-bg-color: var(--bg-secondary-color);
+        --control-input-color: #e2e8f0;
       }
     </style>
   </head>
@@ -22,7 +29,7 @@
         <h1 class="pull-right" style="margin: 0;">
           <a href="javascript:void(0)" onclick="switchMode(this)">☀️</a>
         </h1>
-        <h1>Chota CSS</h1>
+        <h1>Chota CSS (or MENDAKO 🐙)</h1>
         <div class="clearfix"></div>
         <p>A small CSS framework.</p>
       </header>
@@ -730,25 +737,25 @@ P R E F O R M A T T E D T E X T
                 <button type="button" disabled>&lt;button disabled&gt;</button>
               </p>
               <p>
-                <a href="#" class="button">a.button</a>
-                <a href="#" class="button primary">a.button.primary</a>
-                <a href="#" class="button secondary">a.button.secondary</a>
-                <a href="#" class="button dark">a.button.dark</a>
-                <a href="#" class="button error">a.button.error</a>
-                <a href="#" class="button success">a.button.success</a>
+                <a href="" class="button">a.button</a>
+                <a href="" class="button primary">a.button.primary</a>
+                <a href="" class="button secondary">a.button.secondary</a>
+                <a href="" class="button dark">a.button.dark</a>
+                <a href="" class="button error">a.button.error</a>
+                <a href="" class="button success">a.button.success</a>
               </p>
               <p>
-                <a href="#" class="button outline">a.button.outline</a>
-                <a href="#" class="button outline primary"
+                <a href="" class="button outline">a.button.outline</a>
+                <a href="" class="button outline primary"
                   >a.button.outline.primary</a
                 >
-                <a href="#" class="button outline secondary"
+                <a href="" class="button outline secondary"
                   >a.button.outline.secondary</a
                 >
-                <a href="#" class="button outline dark"
+                <a href="" class="button outline dark"
                   >a.button.outline.dark</a
                 >
-                <a href="#" class="button clear">a.button.clear</a>
+                <a href="" class="button clear">a.button.clear</a>
               </p>
             </fieldset>
             <p><a href="#top">[Top]</a></p>
@@ -756,6 +763,13 @@ P R E F O R M A T T E D T E X T
         </section>
       </main>
     </div>
-    <script src="../docs/main.js"></script>
+    <script>
+      function switchMode(el) {
+        const bodyClass = document.body.classList;
+        bodyClass.contains('dark')
+          ? (el.innerHTML = '☀️', bodyClass.remove('dark'))
+          : (el.innerHTML = '🌙', bodyClass.add('dark')); 
+      }
+    </script>
   </body>
 </html>

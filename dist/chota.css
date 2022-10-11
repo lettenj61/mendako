@@ -1,21 +1,22 @@
 /*! chota.css v0.8.0 | MIT License | github.com/jenil/chota */
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #fafafa;
   --bg-secondary-color: #f3f3f6;
-  --color-primary: #14854F;
-  --color-lightGrey: #d2d6dd;
+  --color-primary: #14b8a6;
+  --color-lightGrey: #d1d5db;
   --color-grey: #747681;
-  --color-darkGrey: #3f4144;
-  --color-error: #d43939;
-  --color-success: #28bd14;
+  --color-darkGrey: #374151;
+  --color-error: #db2777;
+  --color-success: #22c55e;
+  --ring-color: #e5e7eb;
+  --control-input-color: #333333;
+  --control-bg-color: #fafafa;
   --grid-maxWidth: 120rem;
   --grid-gutter: 2rem;
   --font-size: 1.6rem;
   --font-color: #333333;
-  --font-family-sans: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  --font-family-mono: monaco, "Consolas", "Lucida Console", monospace;
+  --font-family-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
+  --font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
 }
 html {
   -webkit-box-sizing: border-box;
@@ -482,6 +483,12 @@ textarea[type="text"] {
   transition: all 0.2s ease;
   display: block;
   width: 100%;
+  background-color: var(--control-bg-color);
+  color: var(--control-input-color);
+}
+optgroup, option {
+  background-color: var(--control-bg-color);
+  color: var(--control-input-color);
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]):not(:disabled):hover,
 select:hover,
@@ -508,7 +515,7 @@ textarea.success {
 }
 select {
   -webkit-appearance: none;
-  background: #f3f3f6 no-repeat 100%;
+  background: var(--control-bg-color) no-repeat 100%;
   background-size: 1ex;
   background-origin: content-box;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='40' fill='%23555'><polygon points='0,0 60,0 30,40'/></svg>");
@@ -569,13 +576,14 @@ button {
 button:hover {
   opacity: 0.8;
 }
-.button:active,
-[type="button"]:active,
-[type="reset"]:active,
-[type="submit"]:active,
-button:active {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+.button:active:not(:disabled),
+[type="button"]:active:not(:disabled),
+[type="reset"]:active:not(:disabled),
+[type="submit"]:active:not(:disabled),
+button:active:not(:disabled) {
+  /* transform: scale(0.98); */
+  -webkit-box-shadow: 0 0 0 3px var(--ring-color);
+          box-shadow: 0 0 0 3px var(--ring-color);
 }
 input:disabled,
 button:disabled,

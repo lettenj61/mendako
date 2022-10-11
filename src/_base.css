@@ -1,20 +1,21 @@
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #fafafa;
   --bg-secondary-color: #f3f3f6;
-  --color-primary: #14854F;
-  --color-lightGrey: #d2d6dd;
+  --color-primary: #14b8a6;
+  --color-lightGrey: #d1d5db;
   --color-grey: #747681;
-  --color-darkGrey: #3f4144;
-  --color-error: #d43939;
-  --color-success: #28bd14;
+  --color-darkGrey: #374151;
+  --color-error: #db2777;
+  --color-success: #22c55e;
+  --ring-color: #e5e7eb;
+  --control-input-color: #333333;
+  --control-bg-color: #fafafa;
   --grid-maxWidth: 120rem;
   --grid-gutter: 2rem;
   --font-size: 1.6rem;
   --font-color: #333333;
-  --font-family-sans: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  --font-family-mono: monaco, "Consolas", "Lucida Console", monospace;
+  --font-family-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
+  --font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
 }
 
 html {
